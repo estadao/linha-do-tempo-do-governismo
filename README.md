@@ -1,6 +1,6 @@
 # LINHA DO TEMPO DO GOVERNISMO
 
-Esse é o código para a matéria ["Uma história visual do governismo na Câmara"]('https://www.estadao.com.br/infograficos').
+Esse é o código para a matéria ["Uma história visual do governismo na Câmara"]('https://www.estadao.com.br/infograficos/politica,taxa-de-governismo,964329').
 
 ## Estrutura do repo:
 
