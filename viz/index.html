@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+
+    <style>
+      svg {
+        background: #fff;
+        display: block;
+        margin: 0 auto;
+      }
+
+      svg text {
+        font-family: 'Flama', sans-serif;
+      }
+
+      h1 { margin-bottom: 2rem; }
+      body {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        -webkit-print-color-adjust: exact;
+      }
+      h3 { margin-top: 3rem; }
+      .container {
+        max-width: 46rem;
+      }
+
+
+      .tick line {
+        stroke: #777;
+        stroke-width: 1;
+        }
+
+      .x-axis line {
+        stroke-dasharray: 1, 1;
+        opacity: .2;
+      }
+
+      .x-axis .tick text {
+        fill: #939598;
+        opacity: .5;
+      }
+
+      .x-axis .tick:first-child text, .x-axis .tick:last-child text {
+        opacity: 1;
+        font-weight: bolder;
+      }
+
+      .y-axis .tick line {
+        stroke: #939598;
+      }
+
+      .y-axis .tick text {
+       fill: #939598;
+      }
+
+      .y-axis .tick:first-child text, .y-axis .tick:last-child text {
+        font-weight: bolder;
+      }
+
+      .y-axis .tick:nth-child(3) {
+        opacity: .5;
+        font-size: 10px;
+      }
+
+      .y-axis .tick:nth-child(2n) text {
+        display: none;
+      }
+
+      .y-axis .tick:nth-child(2n) line {
+        opacity: .2
+      }
+
+      text.height-marker {
+        font-weight: bold;
+        font-size: 10px;
+        fill: #0fa89f;
+      }
+
+      line.height-marker {
+        stroke: #0fa89f;
+        stroke-width: .5;
+        stroke-dasharray: 1,1
+      }
+
+
+    </style>
+
+  </head>
+  <body>
+  <div class="container">
+
+    <h2>Média de votação a cada seis meses, toda a Câmara</h2>
+    <div id="area-chart-all-parties"></div>
+    <h2>Todas as votações da Câmara</h2>
+    <div id="bar-chart-all-parties"></div>
+
+    <h2>Média de votação a cada seis meses, PT</h2>
+    <div id="area-chart-pt"></div>
+    <h2>Todas as votações, PT</h2>
+    <div id="bar-chart-pt"></div>
+
+    <h2>Média de votação a cada seis meses, PSDB</h2>
+    <div id="area-chart-psdb"></div>
+    <h2>Todas as votações, PSDB</h2>
+    <div id="bar-chart-psdb"></div>
+
+    <h2>Média de votação a cada seis meses, MDB</h2>
+    <div id="area-chart-mdb"></div>
+    <h2>Todas as votações, MDB</h2>
+    <div id="bar-chart-mdb"></div>
+
+    <h2>Média de votação a cada seis meses, PSL</h2>
+    <div id="area-chart-psl"></div>
+<!--     <h2>Todas as votações, PSL</h2>
+    <div id="bar-chart-psl"></div> -->
+
+    <h2>Média de votação a cada seis meses, PP</h2>
+    <div id="area-chart-pp"></div>
+<!--     <h2>Todas as votações, PP</h2>
+    <div id="bar-chart-pp"></div> -->
+
+    <h2>Média de votação a cada seis meses, PR</h2>
+    <div id="area-chart-pr"></div>
+<!--     <h2>Todas as votações, PR</h2>
+    <div id="bar-chart-pr"></div> -->
+
+    <h2>Média de votação a cada seis meses, PSB</h2>
+    <div id="area-chart-psb"></div>
+<!--     <h2>Todas as votações, PSB</h2>
+    <div id="bar-chart-psb"></div> -->
+
+    <h2>Média de votação a cada seis meses, PRB</h2>
+    <div id="area-chart-prb"></div>
+<!--     <h2>Todas as votações, PRB</h2>
+    <div id="bar-chart-prb"></div> -->
+
+    <h2>Média de votação a cada seis meses, DEM</h2>
+    <div id="area-chart-dem"></div>
+<!--     <h2>Todas as votações, DEM</h2>
+    <div id="bar-chart-dem"></div> -->
+
+    <h2>Média de votação a cada seis meses, PDT</h2>
+    <div id="area-chart-pdt"></div>
+<!--     <h2>Todas as votações, PDT</h2>
+    <div id="bar-chart-pdt"></div> -->
+
+    <h2>Média de votação a cada seis meses, SD</h2>
+    <div id="area-chart-sd"></div>
+<!--     <h2>Todas as votações, SD</h2>
+    <div id="bar-chart-sd"></div> -->
+
+    <h2>Média de votação a cada seis meses, Podemos</h2>
+    <div id="area-chart-pode"></div>
+<!--     <h2>Todas as votações, Podemos</h2>
+    <div id="bar-chart-pode"></div> -->
+
+    <h2>Média de votação a cada seis meses, PTB</h2>
+    <div id="area-chart-ptb"></div>
+<!--     <h2>Todas as votações, PTB</h2>
+    <div id="bar-chart-ptb"></div> -->
+
+    <h2>Média de votação a cada seis meses, PSOL</h2>
+    <div id="area-chart-psol"></div>
+<!--     <h2>Todas as votações, PSOL</h2>
+    <div id="bar-chart-psol"></div> -->
+
+    <h2>Média de votação a cada seis meses, PCdoB</h2>
+    <div id="area-chart-pcdob"></div>
+<!--     <h2>Todas as votações, PCdoB</h2>
+    <div id="bar-chart-pcdob"></div> -->
+
+    <h2>Média de votação a cada seis meses, PSC</h2>
+    <div id="area-chart-psc"></div>
+<!--     <h2>Todas as votações, PSC</h2>
+    <div id="bar-chart-psc"></div> -->
+
+    <h2>Média de votação a cada seis meses, PROS</h2>
+    <div id="area-chart-pros"></div>
+<!--     <h2>Todas as votações, PROS</h2>
+    <div id="bar-chart-pros"></div> -->
+
+    <h2>Média de votação a cada seis meses, PPS</h2>
+    <div id="area-chart-pps"></div>
+<!--     <h2>Todas as votações, PPS</h2>
+    <div id="bar-chart-pps"></div> -->
+
+
+
+
+
+
+<!--     <h2>Resultado de todas as votações, por partido</h2>
+    <div id="chart-bar-partido"></div> -->
+<!--     <h2>Média de votação a cada seis meses, agregado de todos os partidos</h2>
+    <div id="chart-geral"></div>
+    <h2>Resultado de todas as votações, agregado de todos os partidos</h2>
+    <div id="chart-bar-geral"></div>
+ -->
+
+    <!-- This is D3, our graphing library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+    <!-- Time methods -->
+    <script src="https://d3js.org/d3-time.v1.min.js"></script>
+    <!-- Anottation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.3.1/d3-annotation.min.js"></script>
+
+    <!-- Now we include our actual visualization -->
+    <script src="./code/violin-geral.js"></script>
+    <script src="./code/violin-partido.js"></script>
+    <script src="./code/bar-partido.js"></script>
+    <script src="./code/bar-geral.js"></script>
+    <script src="./code/highlightBars.js"></script>
+    <script src="./code/annotateBars.js"></script>
+    <script src="./code/viz.js"></script>
+
+
+
+  </div>
+</html>
+
